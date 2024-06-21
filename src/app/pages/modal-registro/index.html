@@ -1,0 +1,59 @@
+<form
+  id="modal-registro"
+  class="bg-blue-900 text-white flex flex-col w-96 h-[440] font-sans"
+>
+    <div class="flex items-center justify-end space-x-8 mr-5 my-3">
+        <div>
+            <p class="underline">ENTRAR</p>
+        </div>
+        <div>
+            <img src="/src/assets/resources/images/close.png" class="bg-auto" />
+        </div>
+    </div>
+    <div class="text-white text-center border-t-2 pt-6">
+        <div>
+            <h2 class="text-sm font-semibold">ETAPA DE REGISTRO 1</h2>
+        </div>
+
+        <div id="user-registro" class="my-5 px-12">
+            <div>
+                <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+                id="username"
+                type="text"
+                placeholder="  email"
+                />
+            </div>
+            <div>
+                <input
+                class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3"
+                id="password"
+                type="password"
+                placeholder="  Senha"
+            />
+            </div>
+            <div>
+                <div class="relative">
+                    <select class=" w-full bg-gray-200 border text-gray-700 py-2 px-4 pr-8 rounded leading-tight" id="select-paises">
+                    <option>Brasil</option>
+                    </select>
+            </div>
+            <div>
+                <div class="relative">
+                    <select class=" w-full bg-gray-200 border text-gray-700 py-2 px-4 pr-8 rounded leading-tight" id="select-moedas">
+                    <option>Real</option>
+                    </select>
+                </div>
+            </div>
+            <div class="w-full px-12">
+                <button
+                class="btn rounded-md p-1 bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-500 hover:to-blue-600 w-full"
+                >
+                REDEFINIR SENHA
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="https://cdn.tailwindcss.com"></script>
