@@ -1,10 +1,10 @@
 let toggleButton = document.getElementById("toggle-button");
-
 toggleButton.addEventListener("click", function () {
+  console.log("CLICOU");
   toggleMenu();
 });
 
-function toggleMenu() {
+function toggleMenu(event) {
   let menu = document.getElementById("menu");
   let header = document.getElementById("header");
   let formButtons = document.getElementById("form-buttons");

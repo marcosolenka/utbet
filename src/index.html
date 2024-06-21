@@ -4,30 +4,154 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UTBet</title>
+    <script src="/src/assets/libraries/jquery.min.js"></script>
   </head>
-  <body>
-    <header id="header-container"></header>
-    <main class="flex flex-wrap bg-blue-900 lg:pt-12">
-      <!--Contém o banner principal da página-->
-      <div class="px-4 lg:px-16">
-        <img src="/src/assets/resources/images/banner-home.png" />
-      </div>
-      <!--Divulgacoes da pagina-->
-      <div class="w-full">
-        <div class="flex justify-center px-16">
-          <img src="/src/assets/resources/images/ad-01.png" />
+  <body class="bg-blue-900 text-white">
+    <header
+      id="header"
+      class="grid grid-cols-2 lg:grid-cols-1 w-full h-32 lg:h-24"
+    >
+      <!--Hamburger Menu-->
+      <nav class="flex items-center justify-between flex-wrap lg:order-2">
+        <div class="block w-full lg:hidden">
+          <!--EXIBE E ESCONDE O BOTAO HAMBURGER-->
+          <button id="toggle-button" class="ml-5">
+            <svg class="fill-current w-8 h-8" viewBox="0 0 20 20">
+              <image href="/src/assets/resources/images/hamburger.svg"></image>
+            </svg>
+          </button>
         </div>
-        <div class="flex justify-center px-16">
-          <img src="/src/assets/resources/images/ad-02.png" />
+        <div
+          id="menu"
+          class="w-full hidden block flex-grow lg:flex items-center"
+        >
+          <div class="text-center lg:flex-grow">
+            <a
+              href="#"
+              class="block p-2 border-b lg:border-none lg:inline-block lg:mt-0 hover:bg-blue-800"
+            >
+              Cassino
+            </a>
+            <a
+              href="#"
+              class="block p-2 border-b lg:border-none lg:inline-block lg:mt-0 hover:bg-blue-800"
+            >
+              Esportes
+            </a>
+            <a
+              href="#"
+              class="block p-2 border-b lg:border-none lg:inline-block lg:mt-0 hover:bg-blue-800"
+            >
+              Torneios
+            </a>
+            <a
+              href="#"
+              class="block p-2 lg:inline-block lg:mt-0 hover:bg-blue-800"
+            >
+              Esportes Virtuais
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!--BOTOES DE INSCRICAO E LOGIN-->
+      <div id="form-buttons" class="text-sm uppercase lg:flex justify-end">
+        <div class="flex justify-end pr-6 mt-8 lg:mt-0 lg:pr-0">
+          <button
+            class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-1/2 lg:w-24 lg:h-8 lg:mr-4 lg:mt-4"
+          >
+            Entrar
+          </button>
+        </div>
+        <div class="flex justify-end pr-6 mt-2 lg:mt-0">
+          <button
+            class="btn rounded-md p-1 bg-gradient-to-b from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 w-1/2 lg:w-28 lg:h-8 lg:mr-24 lg:mt-4"
+          >
+            Inscrever-se
+          </button>
         </div>
       </div>
-      <div>c</div>
+    </header>
+    <main>
+      <!--PRINCIPAIS ANUNCIOS DA PÁGINA-->
+      <div class="flex flex-wrap lg:pt-12">
+        <!--Contém o banner principal da página-->
+        <div class="px-4 lg:px-16">
+          <img src="/src/assets/resources/images/banner-home.png" />
+        </div>
+        <!--Divulgacoes da pagina-->
+        <div class="w-full">
+          <div class="flex justify-center px-16">
+            <img src="/src/assets/resources/images/ad-01.png" />
+          </div>
+          <div class="flex justify-center px-16">
+            <img src="/src/assets/resources/images/ad-02.png" />
+          </div>
+        </div>
+      </div>
+
+      <!--Jogos Turbo Games-->
+      <div>
+        <div class="flex pl-6">
+          <img src="./assets/resources/images/icon-turbo-games.png" />
+          <p class="mt-4">Turbo Games</p>
+        </div>
+        <div class="w-full grid md:grid-cols-3 lg:grid-cols-5">
+          <img
+            src="./assets/resources/images/card1.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card2.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card3.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card4.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card5.png"
+            class="p-2 justify-self-center"
+          />
+        </div>
+        <div class="flex pl-6 mt-8">
+          <img src="./assets/resources/images/icon-cassino-aovivo.png" />
+          <p class="mt-4">Cassino ao Vivo</p>
+        </div>
+        <div class="w-full grid md:grid-cols-3 lg:grid-cols-5">
+          <img
+            src="./assets/resources/images/card6.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card7.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card8.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card9.png"
+            class="p-2 justify-self-center"
+          />
+          <img
+            src="./assets/resources/images/card10.png"
+            class="p-2 justify-self-center"
+          />
+        </div>
+      </div>
     </main>
 
-    <div>
-      <h1>TESTE DE API</h1>
-    </div>
+    <footer id="footer"></footer>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/src/assets/libraries/jquery.min.js"></script>
     <script src="/src/index.js"></script>
+    <script src="/src/app/util/header.js"></script>
   </body>
 </html>
