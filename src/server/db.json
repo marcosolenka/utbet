@@ -1,17 +1,30 @@
 {
-    "users": [
-      {
-        "email": "marcosolenka@gmail.com",
-        "password": "1234",
-        "pais": "Brasil",
-        "moeda": "BRL",
-        "numero": "991632093",
-        "cpf": "09996910903",
-        "nome": "Marcos",
-        "sobrenome": "Macedo",
-        "dataNascimento": "20/07/1999",
-        "valorEmConta": "10,00"
-      }  
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "81d6",
+      "_email": "marcosolenka@gmail.comn",
+      "_senha": "teste1234",
+      "_pais": "Albânia",
+      "_moeda": "Albanian lek",
+      "_numero": "+55 (42) 9 9163-2093",
+      "_cpf": "099.969.109-03",
+      "_nome": "Marcos",
+      "_sobrenome": "Macedo",
+      "_dataNascimento": "1999-07-20T00:00:00.000Z",
+      "valorEmConta": 0
+    },
+    {
+      "id": "2ab4",
+      "_email": "alexsafadao@gmail.com",
+      "_senha": "sousafado1234",
+      "_pais": "Alemanha",
+      "_moeda": "Euro",
+      "_numero": "+22 (22) 2 2222-2222",
+      "_cpf": "099.969.109-03",
+      "_nome": "Alex",
+      "_sobrenome": "Safadão",
+      "_dataNascimento": "1999-07-20T00:00:00.000Z",
+      "valorEmConta": 0
+    }
+  ]
+}

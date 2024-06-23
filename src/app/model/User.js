@@ -45,7 +45,7 @@ export class User {
   }
 
   set dataNascimento(dataNascimento_p){
-    let data = new Date(novaData);
+    let data = new Date(dataNascimento_p);
     this._dataNascimento = data;
   }
 

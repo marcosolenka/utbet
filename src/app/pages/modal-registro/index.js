@@ -60,18 +60,37 @@ form.addEventListener('submit', function(event) {
 
 
     if (form.checkValidity()){
-            const email = document.getElementById('input-email').value;
-            const senha = document.getElementById('input-senha').value;
-            const pais = document.getElementById('select-pais').value;
-            const moeda = document.getElementById('select-moedas').value;
-            const numero = document.getElementById('input-numero').value;
-            const cpf = document.getElementById('input-cpf').value;
-            const nome = document.getElementById('input-nome').value;
-            const sobrenome = document.getElementById('input-sobrenome').value;
-            const dataNascimento = document.getElementById('date-nascimento').value;
-            const codigoPromocional = document.getElementById('input-promo').value;
+      const email = document.getElementById('input-email').value;
+      const senha = document.getElementById('input-senha').value;
+      const pais = document.getElementById('select-pais').value;
+      const moeda = document.getElementById('select-moedas').value;
+      const numero = document.getElementById('input-numero').value;
+      const cpf = document.getElementById('input-cpf').value;
+      const nome = document.getElementById('input-nome').value;
+      const sobrenome = document.getElementById('input-sobrenome').value;
+      const dataNascimento = document.getElementById('date-nascimento').value;
+      const codigoPromocional = document.getElementById('input-promo').value;
+            
+      const usuario = new User(email, senha, pais, moeda, numero, cpf, nome, sobrenome, dataNascimento, 0);
+      const usuarioJSON = JSON.stringify(usuario);
+      alert(`${email}\n ${senha}\n ${pais}\n ${moeda}\n ${numero}\n ${cpf}\n ${nome}\n ${sobrenome}\n ${dataNascimento}\n ${codigoPromocional}\n`)
 
-            alert(`${email}\n ${senha}\n ${pais}\n ${moeda}\n ${numero}\n ${cpf}\n ${nome}\n ${sobrenome}\n ${dataNascimento}\n ${codigoPromocional}\n`)
+      fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: usuarioJSON
+      })
+
+      .then(response => response.json())
+      .then(data => {
+        console.log('Usuário salvo com sucesso:', data);
+      })
+        .catch(error => {
+          console.error('Erro ao salvar usuário:', error);
+        });
+          
     } 
 });
 
@@ -306,6 +325,7 @@ function validaSobrenome() {
     return true;  
   }
 
+  //VALIDA A DATA DO INPUT DE DATA DE NASCIMENTO
   function validaDataNascimento() {
     const dataNascimentoInput = document.getElementById('date-nascimento');
     const dataNascimento = new Date(dataNascimentoInput.value);
