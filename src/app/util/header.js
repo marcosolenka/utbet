@@ -11,7 +11,7 @@ function toggleMenu(event) {
 
   if (menu.classList.contains("hidden")) {
     menu.classList.remove("hidden");
-    header.classList.remove("sm:grid-cols-2");
+    header.classList.remove("grid-cols-2");
     header.classList.add("grid-cols-1");
     header.classList.remove("h-32");
     header.classList.add("h-64");
@@ -24,4 +24,5 @@ function toggleMenu(event) {
     header.classList.add("h-32");
     formButtons.classList.remove("hidden");
   }
-}
+} 
+

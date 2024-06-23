@@ -1,0 +1,17 @@
+{
+    "users": [
+      {
+        "email": "marcosolenka@gmail.com",
+        "password": "1234",
+        "pais": "Brasil",
+        "moeda": "BRL",
+        "numero": "991632093",
+        "cpf": "09996910903",
+        "nome": "Marcos",
+        "sobrenome": "Macedo",
+        "dataNascimento": "20/07/1999",
+        "valorEmConta": "10,00"
+      }  
+    ]
+  }
+  

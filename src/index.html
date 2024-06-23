@@ -7,6 +7,7 @@
     <script src="/src/assets/libraries/jquery.min.js"></script>
   </head>
   <body class="bg-blue-900 text-white font-sans">
+    <!--CABECALHO DESLOGADO-->
     <header
       id="header"
       class="grid grid-cols-2 lg:grid-cols-1 w-full h-32 lg:h-24"
@@ -57,14 +58,14 @@
       <!--BOTOES DE INSCRICAO E LOGIN-->
       <div id="form-buttons" class="text-sm uppercase lg:flex justify-end">
         <div class="flex justify-end pr-6 mt-8 lg:mt-0 lg:pr-0">
-          <button
+          <button id="botao-login"
             class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-1/2 lg:w-24 lg:h-8 lg:mr-4 lg:mt-4"
           >
             Entrar
           </button>
         </div>
         <div class="flex justify-end pr-6 mt-2 lg:mt-0">
-          <button
+          <button id="botao-inscricao"
             class="btn rounded-md p-1 bg-gradient-to-b from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 w-1/2 lg:w-28 lg:h-8 lg:mr-24 lg:mt-4"
           >
             Inscrever-se
@@ -147,12 +148,14 @@
       </div>
     </main>
 
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden"></div>
+
     <footer id="footer"></footer>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/src/assets/libraries/jquery.min.js"></script>
     <script src="/src/index.js"></script>
     <script src="/src/app/util/header.js"></script>
-    s
+    
   </body>
 </html>
