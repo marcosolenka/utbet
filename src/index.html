@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UTBet</title>
-    <script src="/src/assets/libraries/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-blue-900 text-white font-sans">
     <!--CABECALHO DESLOGADO-->
@@ -22,10 +22,7 @@
             </svg>
           </button>
         </div>
-        <div
-          id="menu"
-          class="w-full hidden block flex-grow lg:flex items-center"
-        >
+        <div id="menu" class="w-full block flex-grow lg:flex items-center">
           <div class="text-center lg:flex-grow">
             <a
               href="#"
@@ -55,21 +52,47 @@
         </div>
       </nav>
 
-      <!--BOTOES DE INSCRICAO E LOGIN-->
-      <div id="form-buttons" class="text-sm uppercase lg:flex justify-end">
-        <div class="flex justify-end pr-6 mt-8 lg:mt-0 lg:pr-0">
-          <button id="botao-login"
-            class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-1/2 lg:w-24 lg:h-8 lg:mr-4 lg:mt-4"
-          >
-            Entrar
-          </button>
+      <!--USUARIO DESLOGADO-->
+      <div class="">
+        <div id="form-buttons" class="text-sm uppercase lg:flex justify-end">
+          <div class="flex justify-end pr-6 mt-8 lg:mt-0 lg:pr-0">
+            <button
+              id="botao-login"
+              class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-1/2 lg:w-24 lg:h-8 lg:mr-4 lg:mt-4"
+            >
+              Entrar
+            </button>
+          </div>
+          <div class="flex justify-end pr-6 mt-2 lg:mt-0">
+            <button
+              id="botao-inscricao"
+              class="btn rounded-md p-1 bg-gradient-to-b from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 w-1/2 lg:w-28 lg:h-8 lg:mr-24 lg:mt-4"
+            >
+              Inscrever-se
+            </button>
+          </div>
         </div>
-        <div class="flex justify-end pr-6 mt-2 lg:mt-0">
-          <button id="botao-inscricao"
-            class="btn rounded-md p-1 bg-gradient-to-b from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 w-1/2 lg:w-28 lg:h-8 lg:mr-24 lg:mt-4"
-          >
-            Inscrever-se
-          </button>
+      </div>
+      <!--USUARIO LOGADO-->
+      <div class="hidden">
+        <div
+          id="form-buttons"
+          class="text-sm uppercase flex items-center justify-end pr-6 h-32 lg:h-auto"
+        >
+          <div class="flex pr-6 md:mr-8 lg:mr-0 lg:pr-0">
+            <button
+              id="botao-login"
+              class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-1/2 w-24 lg:w-24 lg:h-8 lg:mr-4 lg:mt-4"
+            >
+              DEPOSITAR
+            </button>
+          </div>
+          <div class="flex justify-end pr-6 mt-2 lg:mt-0">
+            <img
+              src="./assets/resources/images/user-icon.png"
+              class="bg-auto"
+            />
+          </div>
         </div>
       </div>
     </header>
@@ -148,14 +171,15 @@
       </div>
     </main>
 
-    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden"></div>
+    <div
+      id="modal"
+      class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden"
+    ></div>
 
     <footer id="footer"></footer>
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="/src/assets/libraries/jquery.min.js"></script>
     <script src="/src/index.js"></script>
-    <script src="/src/app/util/header.js"></script>
-    
+    <script type="module" src="/src/app/util/header.js"></script>
   </body>
 </html>

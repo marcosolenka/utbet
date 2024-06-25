@@ -2,9 +2,17 @@ $(document).ready(function () {
   $("#footer").load("./footer.html");
 });
 
+//VERIFICA LOGIN ANTES DE CARREGAR A PAGINA
+document.addEventListener('DOMContentLoaded', function() {
+  if (!verificarAutenticacao()) {
+      //window.location.href = '/login.html'; 
+      console.log('usuario off');
+  }
+});
+
+
 let botaoEntrar = document.getElementById('botao-login');
 let botaoInscricao = document.getElementById('botao-inscricao');
-//let modal = document.getElementById('modal');
 
 
 //ABRE O MODAL DE LOGIN AO CLICAR NO BOTAO ENTRAR
@@ -82,5 +90,8 @@ $(document).on('click', '#btn-voltar-modal-registro', function(event) {
   $('#etapa-registro-2').addClass('hidden');
 });
 
-
+//VERIFICA SE O USUARIO ESTA LOGADO
+function verificarAutenticacao() {
+  return localStorage.getItem('usuarioLogado') === 'true';
+}
 

@@ -1,62 +1,65 @@
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
 <form
   id="modal-saque"
   class="bg-blue-900 text-white flex flex-col w-96 h-[480] font-sans"
 >
-    <div class="flex items-center justify-end space-x-8 mr-5 my-3">
-        <div>
-            <img src="/src/assets/resources/images/close.png" class="bg-auto" />
-        </div>
+  <div class="flex items-center justify-end space-x-8 mr-5 my-3">
+    <div>
+      <img src="/src/assets/resources/images/close.png" class="bg-auto" />
     </div>
+  </div>
 
-    <!--GERAÇÃO QRCODE-->
-    <div class="h-96 flex flex-col justify-center items-center">
-        <div>
-            <img src="/src/assets/resources/images/qrcode.png">
-        </div>
-        <div class="flex">
-            <p class="text-2xl font-semibold mt-5">Valor: R$ <span>100</span></p>
-        </div>
-        <div class="mt-5">
-            <button type="submit"
-            class="rounded-md border w-full py-3 px-16"
-            >
-                <p class="text-lg font-bold">Copiar PIX Copia e Cola</p>
-            </button>
-        </div>
-        <span class="text-center w-full text-yellow-400 font-semibold text-sm mt-1"><p>CÓDIGO COPIADO COM SUCESSO</p></span>
+  <!--GERAÇÃO QRCODE-->
+  <div class="h-96 flex flex-col justify-center items-center">
+    <div>
+      <img src="/src/assets/resources/images/qrcode.png" />
     </div>
+    <div class="flex">
+      <p class="text-2xl font-semibold mt-5">Valor: R$ <span>100</span></p>
+    </div>
+    <div class="mt-5">
+      <button type="submit" class="rounded-md border w-full py-3 px-16">
+        <p class="text-lg font-bold">Copiar PIX Copia e Cola</p>
+      </button>
+    </div>
+    <span class="text-center w-full text-yellow-400 font-semibold text-sm mt-1"
+      ><p>CÓDIGO COPIADO COM SUCESSO</p></span
+    >
+  </div>
 
-    <!--DEPOSITO-->
-    <div class="flex flex-col justify-center h-96 hidden">
-        <div>
-            <img src="/src/assets/resources/images/pix-logo.png">
-        </div>
-        <div id="user-registro" class="px-12 mt-3">
-            <div>
-            <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-                id="username"
-                type="text"
-                placeholder="  Valor"
-            />
-            </div>
-            <div>
-                <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-                id="username"
-                type="text"
-                placeholder="  Cupom"
-            />
-            </div>
-            <div class="-mt-3">
-                <button type="submit"
-                class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
-            >
-            <p class="text-sm font-bold">DEPOSITAR</p>
-            </button>
-            </div>
-        </div>
+  <!--DEPOSITO-->
+  <div class="flex flex-col justify-center h-96 hidden">
+    <div>
+      <img src="/src/assets/resources/images/pix-logo.png" />
     </div>
+    <div id="user-registro" class="px-12 mt-3">
+      <div>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          id="username"
+          type="text"
+          placeholder="  Valor"
+        />
+      </div>
+      <div>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          id="username"
+          type="text"
+          placeholder="  Cupom"
+        />
+      </div>
+      <div class="-mt-3">
+        <button
+          type="submit"
+          class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
+        >
+          <p class="text-sm font-bold">DEPOSITAR</p>
+        </button>
+      </div>
+    </div>
+  </div>
 </form>
-
-<script src="https://cdn.tailwindcss.com"></script>

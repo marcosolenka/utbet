@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "81d6",
-      "_email": "marcosolenka@gmail.comn",
+      "_email": "marcosolenka@gmail.com",
       "_senha": "teste1234",
       "_pais": "Albânia",
       "_moeda": "Albanian lek",
@@ -24,6 +24,45 @@
       "_nome": "Alex",
       "_sobrenome": "Safadão",
       "_dataNascimento": "1999-07-20T00:00:00.000Z",
+      "valorEmConta": 0
+    },
+    {
+      "id": "daa2",
+      "_email": "marcosolenka@gmail.comn",
+      "_senha": "tewa12312",
+      "_pais": "Albânia",
+      "_moeda": "Albanian lek",
+      "_numero": "+55 (42) 9 9163-2093",
+      "_cpf": "099.969.109-03",
+      "_nome": "Marcos",
+      "_sobrenome": "Macedo",
+      "_dataNascimento": "1999-07-20T00:00:00.000Z",
+      "valorEmConta": 0
+    },
+    {
+      "id": "4d44",
+      "_email": "teste@teste.com",
+      "_senha": "teste1231",
+      "_pais": "Alândia",
+      "_moeda": "Euro",
+      "_numero": "+55 (42) 9 9163-2093",
+      "_cpf": "099.969.109-03",
+      "_nome": "dwa",
+      "_sobrenome": "Safadão",
+      "_dataNascimento": "1989-07-20T00:00:00.000Z",
+      "valorEmConta": 0
+    },
+    {
+      "id": "35cb",
+      "_email": "marcosolenka@gmail.com",
+      "_senha": "mar5cos5",
+      "_pais": "Brasil",
+      "_moeda": "Brazilian real",
+      "_numero": "+55 (42) 9 9163-2093",
+      "_cpf": "099.969.109-03",
+      "_nome": "Marcos ",
+      "_sobrenome": "Macedo",
+      "_dataNascimento": "1999-02-01T00:00:00.000Z",
       "valorEmConta": 0
     }
   ]

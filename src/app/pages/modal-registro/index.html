@@ -1,160 +1,183 @@
-
-  <form
-    id="form-registro"
-    class="bg-blue-900 text-white flex flex-col font-sans w-96"
-  >
-    <div class="flex items-center justify-end space-x-8 mr-5 my-3">
-      <div class="cursor-pointer" id="modais-entrar">
-        <p class="underline">ENTRAR</p>
-      </div>
-      <div id="icone-fechar" class="cursor-pointer">
-        <img src="/src/assets/resources/images/close.png" class="bg-auto" />
-      </div>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<form
+  id="form-registro"
+  class="bg-blue-900 text-white flex flex-col font-sans w-96"
+>
+  <div class="flex items-center justify-end space-x-8 mr-5 my-3">
+    <div class="cursor-pointer" id="modais-entrar">
+      <p class="underline">ENTRAR</p>
     </div>
-    
-    
-    <!--ETAPA DE REGISTRO 1-->
-    <div id="etapa-registro-1" class="text-white text-center border-t-2 pt-6">
-      <div>
-        <h2 class="font-bold text-sm">ETAPA DE REGISTRO 1</h2>
-      </div>
+    <div id="icone-fechar" class="cursor-pointer">
+      <img src="/src/assets/resources/images/close.png" class="bg-auto" />
+    </div>
+  </div>
 
-      <div id="user-registro" class="my-5">
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]([a-z]+)?$" required
-            id="input-email"
-            type="text"
-            placeholder="  Email"
-          />
-        </div>
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required
-            id="input-senha"
-            type="password"
-            placeholder="  Senha"
-          />
-          <span id="span-senha" class="uppercase text-sm text-red-500 hidden">min. 8 caracteres com letra e número</span>
-        </div>
-        
-        <div class="px-12">
-          <select class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3" id="select-pais">
-          </select>
-        </div>
-
-        <div class="px-12">
-          <select class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3" id="select-moedas">
-          </select>
-        </div>
-
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            pattern="^\+\d{2}\s\(\d{2}\)\s\d\s\d{4,5}-\d{4}$" required
-            id="input-numero"
-            type="text"
-            placeholder="  Número"
-          />
-        </div>
-
-        <div class="pb-5 mt-[5]">
-          <div class="text-sm">
-              <p>Ao se inscrever você concorda com as</p>
-              <p><span class="underline">Politicas de Privacidade</span> e os <span class="underline">Termos de Uso</span></p>
-          </div>
-          <div class="w-full px-12">
-            <button id="btn-proximo-modal-registro"
-              class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
-            >
-            <p class="text-sm font-bold">PRÓXIMO</p>
-            </button>
-          </div>
-        </div>
-      </div>
+  <!--ETAPA DE REGISTRO 1-->
+  <div id="etapa-registro-1" class="text-white text-center border-t-2 pt-6">
+    <div>
+      <h2 class="font-bold text-sm">ETAPA DE REGISTRO 1</h2>
     </div>
 
-    <!--ETAPA DE REGISTRO 2-->
-    <div id="etapa-registro-2" class="text-white text-center border-t-2 pt-6 hidden">
-      <div>
-        <h2 class="font-bold text-sm mb-3">ETAPA DE REGISTRO 2</h2>
+    <div id="user-registro" class="my-5">
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]([a-z]+)?$"
+          required
+          id="input-email"
+          type="text"
+          placeholder="  Email"
+        />
       </div>
-
-      <div id="user-registro">
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" required
-            id="input-cpf"
-            type="text"
-            placeholder="  CPF"
-          />
-        </div>
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$" required
-            id="input-nome"
-            type="text"
-            placeholder="  Nome"
-          />
-        </div>
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$" required
-            id="input-sobrenome"
-            type="text"
-            placeholder="  Sobrenome"
-          />
-        </div>
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+          required
+          id="input-senha"
+          type="password"
+          placeholder="  Senha"
+        />
+        <span id="span-senha" class="uppercase text-sm text-red-500 hidden"
+          >min. 8 caracteres com letra e número</span
+        >
+      </div>
 
       <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight mb-3"
-            pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\d{1,4}$" required
-            id="date-nascimento"
-            type="date"
-            placeholder="  Nascimento"
-          />
-        </div>
+        <select
+          class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          id="select-pais"
+        ></select>
+      </div>
 
-        <div class="px-12">
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-            id="input-promo"
-            type="text"
-            placeholder="  Código Promocional"
-          />
-        </div>
+      <div class="px-12">
+        <select
+          class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          id="select-moedas"
+        ></select>
+      </div>
 
-        <div class="pb-5 ">
-          <div class="text-sm mt-2">
-              <p class="pt-2">Ao se inscrever você concorda com as</p>
-              <p><span class="underline">Politicas de Privacidade</span> e os <span class="underline">Termos de Uso</span></p>
-          </div>
-          <div class="w-full px-12 flex space-x-2 pb-3">
-            <button id="btn-voltar-modal-registro"
-              class="rounded-md border border-2 hover:bg-blue-700 w-full mt-4 mb-2 py-2"
-            >
-            <p class="text-sm font-bold">VOLTAR</p>
-            </button>
-            <button type="submit"
-              class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
-            >
-            <p class="text-sm font-bold">INSCREVER-SE</p>
-            </button>
-          </div>
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          pattern="^\+\d{2}\s\(\d{2}\)\s\d\s\d{4,5}-\d{4}$"
+          required
+          id="input-numero"
+          type="text"
+          placeholder="  Número"
+        />
+      </div>
+
+      <div class="pb-5 mt-[5]">
+        <div class="text-sm">
+          <p>Ao se inscrever você concorda com as</p>
+          <p>
+            <span class="underline">Politicas de Privacidade</span> e os
+            <span class="underline">Termos de Uso</span>
+          </p>
+        </div>
+        <div class="w-full px-12">
+          <button
+            id="btn-proximo-modal-registro"
+            class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
+          >
+            <p class="text-sm font-bold">PRÓXIMO</p>
+          </button>
         </div>
       </div>
     </div>
-  </form>
+  </div>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" src="/src/app/pages/modal-registro/index.js"></script>
-  <Script src="/src/assets/libraries/jquery.min.js"></Script>
-  <script src="/src/assets/libraries/jquery.mask.min.js"></script>
+  <!--ETAPA DE REGISTRO 2-->
+  <div
+    id="etapa-registro-2"
+    class="text-white text-center border-t-2 pt-6 hidden"
+  >
+    <div>
+      <h2 class="font-bold text-sm mb-3">ETAPA DE REGISTRO 2</h2>
+    </div>
 
+    <div id="user-registro">
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+          required
+          id="input-cpf"
+          type="text"
+          placeholder="  CPF"
+        />
+      </div>
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$"
+          required
+          id="input-nome"
+          type="text"
+          placeholder="  Nome"
+        />
+      </div>
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$"
+          required
+          id="input-sobrenome"
+          type="text"
+          placeholder="  Sobrenome"
+        />
+      </div>
 
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight mb-3"
+          pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\d{1,4}$"
+          required
+          id="date-nascimento"
+          type="date"
+          placeholder="  Nascimento"
+        />
+      </div>
+
+      <div class="px-12">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
+          id="input-promo"
+          type="text"
+          placeholder="  Código Promocional"
+        />
+      </div>
+
+      <div class="pb-5">
+        <div class="text-sm mt-2">
+          <p class="pt-2">Ao se inscrever você concorda com as</p>
+          <p>
+            <span class="underline">Politicas de Privacidade</span> e os
+            <span class="underline">Termos de Uso</span>
+          </p>
+        </div>
+        <div class="w-full px-12 flex space-x-2 pb-3">
+          <button
+            id="btn-voltar-modal-registro"
+            class="rounded-md border border-2 hover:bg-blue-700 w-full mt-4 mb-2 py-2"
+          >
+            <p class="text-sm font-bold">VOLTAR</p>
+          </button>
+          <button
+            type="submit"
+            class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
+          >
+            <p class="text-sm font-bold">INSCREVER-SE</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script type="module" src="/src/app/pages/modal-registro/index.js"></script>
+<script src="/src/assets/libraries/jquery.min.js"></script>
+<script src="/src/assets/libraries/jquery.mask.min.js"></script>

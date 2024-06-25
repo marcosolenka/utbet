@@ -1,4 +1,5 @@
 import { User } from '../../model/User.js';
+import { UsuarioService } from '../../services/usuario.service.js';
 
 //CHAMA A FUNCAO PAISES QUE RECEBE VIA API O NOME DOS PAISES
 paises();
@@ -72,25 +73,11 @@ form.addEventListener('submit', function(event) {
       const codigoPromocional = document.getElementById('input-promo').value;
             
       const usuario = new User(email, senha, pais, moeda, numero, cpf, nome, sobrenome, dataNascimento, 0);
+      const usuarioService = new UsuarioService();
       const usuarioJSON = JSON.stringify(usuario);
+
+      usuarioService.salvarUsuario(usuarioJSON);
       alert(`${email}\n ${senha}\n ${pais}\n ${moeda}\n ${numero}\n ${cpf}\n ${nome}\n ${sobrenome}\n ${dataNascimento}\n ${codigoPromocional}\n`)
-
-      fetch('http://localhost:3000/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: usuarioJSON
-      })
-
-      .then(response => response.json())
-      .then(data => {
-        console.log('Usuário salvo com sucesso:', data);
-      })
-        .catch(error => {
-          console.error('Erro ao salvar usuário:', error);
-        });
-          
     } 
 });
 
