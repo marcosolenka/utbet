@@ -1,6 +1,5 @@
 let toggleButton = document.getElementById("toggle-button");
 toggleButton.addEventListener("click", function () {
-  console.log("CLICOU");
   toggleMenu();
 });
 
@@ -24,5 +23,4 @@ function toggleMenu(event) {
     header.classList.add("h-32");
     formButtons.classList.remove("hidden");
   }
-} 
-
+}

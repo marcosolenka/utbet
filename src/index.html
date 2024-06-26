@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UTBet</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-blue-900 text-white font-sans">
     <!--CABECALHO DESLOGADO-->
@@ -22,7 +21,10 @@
             </svg>
           </button>
         </div>
-        <div id="menu" class="w-full block flex-grow lg:flex items-center">
+        <div
+          id="menu"
+          class="w-full hidden block flex-grow lg:flex items-center"
+        >
           <div class="text-center lg:flex-grow">
             <a
               href="#"
@@ -53,7 +55,7 @@
       </nav>
 
       <!--USUARIO DESLOGADO-->
-      <div class="">
+      <div id="nav-deslogado" class="">
         <div id="form-buttons" class="text-sm uppercase lg:flex justify-end">
           <div class="flex justify-end pr-6 mt-8 lg:mt-0 lg:pr-0">
             <button
@@ -74,7 +76,7 @@
         </div>
       </div>
       <!--USUARIO LOGADO-->
-      <div class="hidden">
+      <div id="nav-logado" class="hidden">
         <div
           id="form-buttons"
           class="text-sm uppercase flex items-center justify-end pr-6 h-32 lg:h-auto"
@@ -173,11 +175,12 @@
 
     <div
       id="modal"
-      class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden"
+      class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-70 hidden"
     ></div>
 
     <footer id="footer"></footer>
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="/src/assets/libraries/jquery.min.js"></script>
     <script src="/src/index.js"></script>
     <script type="module" src="/src/app/util/header.js"></script>
