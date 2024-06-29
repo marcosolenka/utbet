@@ -12,7 +12,9 @@
       class="grid grid-cols-2 lg:grid-cols-1 w-full h-32 lg:h-24"
     >
       <!--Hamburger Menu-->
-      <nav class="flex items-center justify-between flex-wrap lg:order-2">
+      <nav
+        class="flex items-center justify-between flex-wrap lg:order-2 w-1/3 md:w-full"
+      >
         <div class="block w-full lg:hidden">
           <!--EXIBE E ESCONDE O BOTAO HAMBURGER-->
           <button id="toggle-button" class="ml-5">
@@ -76,20 +78,23 @@
         </div>
       </div>
       <!--USUARIO LOGADO-->
-      <div id="nav-logado" class="hidden">
+      <div id="nav-logado" class="flex justify-end hidden">
         <div
           id="form-buttons"
           class="text-sm uppercase flex items-center justify-end pr-6 h-32 lg:h-auto"
         >
           <div class="flex pr-6 md:mr-8 lg:mr-0 lg:pr-0">
             <button
-              id="botao-login"
-              class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-1/2 w-24 lg:w-24 lg:h-8 lg:mr-4 lg:mt-4"
+              id="botao-depositar"
+              class="btn rounded-md p-1 bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 w-24 -ml-24"
             >
               DEPOSITAR
             </button>
           </div>
-          <div class="flex justify-end pr-6 mt-2 lg:mt-0">
+          <div>
+            <span id="valor-depositado" class="flex px-3">R$ 0,00</span>
+          </div>
+          <div class="flex justify-end mt-2 lg:mt-0 items-center">
             <img
               src="./assets/resources/images/user-icon.png"
               class="bg-auto"
@@ -98,7 +103,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="hidden">
       <!--PRINCIPAIS ANUNCIOS DA PÁGINA-->
       <div class="flex flex-wrap lg:pt-12">
         <!--Contém o banner principal da página-->

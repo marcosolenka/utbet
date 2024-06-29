@@ -22,6 +22,7 @@ document.addEventListener("loginSuccessEvent", function () {
 
 let botaoEntrar = document.getElementById("botao-login");
 let botaoInscricao = document.getElementById("botao-inscricao");
+let botaoDepositar = document.getElementById("botao-depositar");
 
 //ABRE O MODAL DE LOGIN AO CLICAR NO BOTAO ENTRAR
 botaoEntrar.addEventListener("click", function (event) {
@@ -43,6 +44,35 @@ botaoInscricao.addEventListener("click", function (event) {
       $("#modal").removeClass("hidden");
     });
   });
+});
+
+//ABRE O MODAL DE DEPOSITO AO CLICAR NO BOTAO DEPOSITAR
+botaoDepositar.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  $(document).ready(function () {
+    $("#modal").load("./app/pages/modal-deposito/index.html", function () {
+      $("#modal").removeClass("hidden");
+    });
+  });
+});
+
+//MODAL-DEPOSITO: CARREGA A SEGUNDA PARTE DO DEPOSITO AO CLICAR NO BOTAO PROXIMO
+$(document).on("click", "#botao-depositar-valor", function (event) {
+  event.preventDefault();
+  $("#etapa-deposito-1").addClass("hidden");
+  $("#etapa-deposito-2").removeClass("hidden");
+});
+
+//MODAL-DEPOSITO: "COPIA" O CODIGO PIX E, AO PASSAR 5 SEGUNDOS, EFETUA O "DEPOSITO" NA CONTA
+$(document).on("click", "#btn-copia-pix", function (event) {
+  event.preventDefault();
+  $("#pix-copia-sucesso").removeClass("hidden");
+
+  setTimeout(function () {
+    $("#pix-copia-sucesso").addClass("hidden");
+    $("#deposito-efetuado").removeClass("hidden");
+  }, 5000);
 });
 
 //ABRE O MODAL DE ENTRAR AO CLICAR NO TEXTO ENTRAR EM QUALQUER MODAL

@@ -64,6 +64,19 @@
       "_sobrenome": "Macedo",
       "_dataNascimento": "1999-02-01T00:00:00.000Z",
       "valorEmConta": 0
+    },
+    {
+      "id": "d058",
+      "_email": "emillyzatti6@gmail.com",
+      "_senha": "emilly987",
+      "_pais": "Brasil",
+      "_moeda": "Brazilian real",
+      "_numero": "+55 (42) 9 8421-0795",
+      "_cpf": "108.721.209-02",
+      "_nome": "Emilly",
+      "_sobrenome": "Zatti",
+      "_dataNascimento": "2005-03-28T00:00:00.000Z",
+      "valorEmConta": 0
     }
   ]
 }
