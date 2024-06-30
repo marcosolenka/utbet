@@ -91,8 +91,8 @@
               DEPOSITAR
             </button>
           </div>
-          <div>
-            <span id="valor-depositado" class="flex px-3">R$ 0,00</span>
+          <div class="flex pl-3">
+            <span>R$</span><span id="valor-depositado" class="flex px-3"></span>
           </div>
           <div class="flex justify-end mt-2 lg:mt-0 items-center">
             <img
@@ -103,7 +103,7 @@
         </div>
       </div>
     </header>
-    <main class="hidden">
+    <main class="">
       <!--PRINCIPAIS ANUNCIOS DA PÁGINA-->
       <div class="flex flex-wrap lg:pt-12">
         <!--Contém o banner principal da página-->
@@ -187,7 +187,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/src/assets/libraries/jquery.min.js"></script>
-    <script src="/src/index.js"></script>
+    <script type="module" src="/src/index.js"></script>
     <script type="module" src="/src/app/util/header.js"></script>
   </body>
 </html>

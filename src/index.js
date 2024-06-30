@@ -1,3 +1,5 @@
+import { UsuarioService } from "./app/services/usuario.service.js";
+
 $(document).ready(function () {
   $("#footer").load("./footer.html");
 });
@@ -5,9 +7,20 @@ $(document).ready(function () {
 //VERIFICA LOGIN ANTES DE CARREGAR A PAGINA
 document.addEventListener("DOMContentLoaded", function () {
   if (!verificarAutenticacao()) {
-    //window.location.href = '/login.html';
-    console.log("usuario off");
+    $("#nav-logado").addClass("hidden");
+    $("#nav-deslogado").removeClass("hidden");
+    return;
   }
+  $("#modal").addClass("hidden");
+  $("#nav-logado").removeClass("hidden");
+  $("#nav-deslogado").addClass("hidden");
+
+  const usuario = new UsuarioService();
+  let valor = usuario.consultarSaldo(localStorage.getItem("usuarioLogado"));
+  let spanValor = document.getElementById('valor-depositado');
+  
+  console.log(valor);
+  
 });
 
 // index.html
@@ -128,5 +141,6 @@ $(document).on("click", "#btn-voltar-modal-registro", function (event) {
 
 //VERIFICA SE O USUARIO ESTA LOGADO
 function verificarAutenticacao() {
-  return localStorage.getItem("usuarioLogado") === "true";
+  return localStorage.getItem("usuarioLogado") !== null;
 }
+

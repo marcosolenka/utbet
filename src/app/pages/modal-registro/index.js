@@ -61,6 +61,7 @@ form.addEventListener('submit', function(event) {
 
 
     if (form.checkValidity()){
+      let valorInicial = 0;
       const email = document.getElementById('input-email').value;
       const senha = document.getElementById('input-senha').value;
       const pais = document.getElementById('select-pais').value;
@@ -71,13 +72,15 @@ form.addEventListener('submit', function(event) {
       const sobrenome = document.getElementById('input-sobrenome').value;
       const dataNascimento = document.getElementById('date-nascimento').value;
       const codigoPromocional = document.getElementById('input-promo').value;
+      if (codigoPromocional === 'utf30'){
+        valorInicial += 30;
+      }
             
-      const usuario = new User(email, senha, pais, moeda, numero, cpf, nome, sobrenome, dataNascimento, 0);
+      const usuario = new User(email, senha, pais, moeda, numero, cpf, nome, sobrenome, dataNascimento, valorInicial);
       const usuarioService = new UsuarioService();
       const usuarioJSON = JSON.stringify(usuario);
 
       usuarioService.salvarUsuario(usuarioJSON);
-      alert(`${email}\n ${senha}\n ${pais}\n ${moeda}\n ${numero}\n ${cpf}\n ${nome}\n ${sobrenome}\n ${dataNascimento}\n ${codigoPromocional}\n`)
     } 
 });
 
@@ -141,9 +144,11 @@ async function paises() {
     }
   }
 
-  //VALIDA A ENTRADA DO INPUT EMAIL
-  function validaEmail() {
+   //VALIDA A ENTRADA DO INPUT EMAIL
+   async function validaEmail() {
     const emailInput = document.getElementById('input-email');
+    const usuarioService = new UsuarioService();
+    const emailValido = await usuarioService.verificaEmail(emailInput.value);
   
     if (emailInput.validity.valueMissing) {
       emailInput.classList.add('border-red-500');
@@ -162,6 +167,17 @@ async function paises() {
       emailInput.classList.remove('border-red-500');
       emailInput.classList.remove('border-4');
     }
+
+    if(emailValido){
+      alert('Já existe um usuário cadastrado com esse email');
+      emailInput.classList.add('border-red-500');
+      emailInput.classList.add('border-4');
+      return false;
+    }else {
+      emailInput.classList.remove('border-red-500');
+      emailInput.classList.remove('border-4');
+    }
+
     return true;  
   }
   

@@ -83,8 +83,7 @@ export class User {
   }
 
 
-  get birthdayDate() {
-    //return new Date(this._birthday + 'GMT-0300');
-    return new Date(this._birthday + 'UTC-3');
+  get valorEmConta(){
+    return this._valorEmConta;
   }
 }

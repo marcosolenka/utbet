@@ -13,7 +13,7 @@ form.addEventListener("submit", async function (event) {
     const verificaUsuario = await usuarioService.verificarUsuario(email, senha);
 
     if (verificaUsuario) {
-      localStorage.setItem("usuarioLogado", "true");
+      localStorage.setItem("usuarioLogado", `${email}`);
       logadoComSucesso();
     } else {
       console.log("erro");
