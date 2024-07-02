@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>UTBet</title>
   </head>
   <body>
     <form id="cadastro-usuario">
       <!--COLUNA DA ESQUERDA-->
-      <div class="">
+      <div>
         <label for="input-cadastro-email">EMAIL</label>
         <input
           pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]([a-z]+)?$"
@@ -76,19 +77,14 @@
           placeholder="  Sobrenome"
         />
       </div>
-
-      <div>
-        <label for="date-nascimento">DATA DE NASCIMENTO</label>
-        <input
-          pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\d{1,4}$"
-          required
-          id="date-nascimento"
-          type="date"
-          placeholder="  Nascimento"
-        />
-      </div>
+      <button
+            type="submit"
+          >
+            SALVAR
+          </button>
 
     </form>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="index.js" type="module"></script>
   </body>
 </html>
