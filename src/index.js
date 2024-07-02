@@ -14,13 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#modal").addClass("hidden");
   $("#nav-logado").removeClass("hidden");
   $("#nav-deslogado").addClass("hidden");
-
-  const usuario = new UsuarioService();
-  let valor = usuario.consultarSaldo(localStorage.getItem("usuarioLogado"));
-  let spanValor = document.getElementById('valor-depositado');
-  
-  console.log(valor);
-  
+  consultaSaldoEmConta();
 });
 
 // index.html
@@ -142,5 +136,23 @@ $(document).on("click", "#btn-voltar-modal-registro", function (event) {
 //VERIFICA SE O USUARIO ESTA LOGADO
 function verificarAutenticacao() {
   return localStorage.getItem("usuarioLogado") !== null;
+}
+
+//ADICIONA O SALDO EM CONTA AO HEADER
+async function consultaSaldoEmConta() {
+  const usuario = new UsuarioService();
+  const email = localStorage.getItem("usuarioLogado");
+
+  try {
+      let valor = await usuario.consultarSaldo(email);
+      let spanValor = document.getElementById('valor-depositado');
+      if (spanValor) {
+          spanValor.textContent = valor; // Atualiza o valor na UI
+      }
+      return valor; // Retorna o valor consultado
+  } catch (error) {
+      console.error('Erro ao consultar saldo:', error);
+      throw error; // Opcional: você pode decidir o que fazer em caso de erro
+  }
 }
 

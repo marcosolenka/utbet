@@ -84,7 +84,8 @@ export class UsuarioService {
             const usuarioEncontrado = usuarios.find(usuario => usuario._email === email);
     
             if (usuarioEncontrado) {
-                return usuarioEncontrado.valorEmConta;
+                let valor = usuarioEncontrado.valorEmConta;
+                return valor;
             } else {
                 throw new Error('Usuário não encontrado');
             }
@@ -93,7 +94,6 @@ export class UsuarioService {
             console.error('Erro ao consultar saldo:', error);
             throw error;
         }
-    }
-    
-    
+    }  
 }
+

@@ -9,9 +9,8 @@
     <form id="cadastro-usuario">
       <!--COLUNA DA ESQUERDA-->
       <div class="">
-        <label for="input-cadastro-email">Email</label>
+        <label for="input-cadastro-email">EMAIL</label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
           pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]([a-z]+)?$"
           required
           id="input-email"
@@ -19,7 +18,76 @@
           placeholder="  Email"
         />
       </div>
-      <div></div>
+      <div>
+        <label for="select-pais">PAÍS</label>
+        <select
+          id="select-pais"
+        >
+        </select>
+      </div>
+
+      <div>
+        <label for="select-moedas">MOEDA</label>
+        <select
+          id="select-moedas"
+        ></select>
+      </div>
+
+      <div>
+        <label for="input-numero">NÚMERO</label>
+        <input
+          pattern="^\+\d{2}\s\(\d{2}\)\s\d\s\d{4,5}-\d{4}$"
+          required
+          id="input-numero"
+          type="text"
+          placeholder="  Número"
+        />
+      </div>
+
+      <div>
+        <label for="input-cpf">CPF</label>
+        <input
+          pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+          required
+          id="input-cpf"
+          type="text"
+          placeholder="  CPF"
+        />
+      </div>
+
+      <div>
+        <label for="input-nome">NOME</label>
+        <input
+          pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$"
+          required
+          id="input-nome"
+          type="text"
+          placeholder="  Nome"
+        />
+      </div>
+
+      <div>
+        <label for="input-sobrenome">SOBRENOME</label>
+        <input
+          pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$"
+          required
+          id="input-sobrenome"
+          type="text"
+          placeholder="  Sobrenome"
+        />
+      </div>
+
+      <div>
+        <label for="date-nascimento">DATA DE NASCIMENTO</label>
+        <input
+          pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\d{1,4}$"
+          required
+          id="date-nascimento"
+          type="date"
+          placeholder="  Nascimento"
+        />
+      </div>
+
     </form>
     <script src="https://cdn.tailwindcss.com"></script>
   </body>

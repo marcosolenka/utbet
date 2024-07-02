@@ -1,5 +1,6 @@
+<script src="index.js" type="module"></script>
 <form
-  id="modal-saque"
+  id="modal-deposito"
   class="bg-blue-900 text-white flex flex-col w-96 h-[480] font-sans rounded-xl"
 >
   <div class="flex items-center justify-end space-x-8 mr-5 my-3">
@@ -45,11 +46,11 @@
     <div>
       <img src="/src/assets/resources/images/pix-logo.png" />
     </div>
-    <div id="user-registro" class="px-12 mt-3">
+    <div id="user-deposito" class="px-12 mt-3">
       <div>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-          id="username"
+          id="valor-deposito"
           type="text"
           placeholder="  Valor"
         />
@@ -57,7 +58,7 @@
       <div>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3"
-          id="username"
+          id="cupom-deposito"
           type="text"
           placeholder="  Cupom"
         />
@@ -66,7 +67,7 @@
         <button
           id="botao-depositar-valor"
           type="submit"
-          class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2"
+          class="rounded-md bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 w-full mt-4 mb-2 py-2 cursor-not-allowed" disabled
         >
           <p class="text-sm font-bold">DEPOSITAR</p>
         </button>
