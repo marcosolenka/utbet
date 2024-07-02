@@ -30,7 +30,6 @@ document.addEventListener("loginSuccessEvent", function () {
 let botaoEntrar = document.getElementById("botao-login");
 let botaoInscricao = document.getElementById("botao-inscricao");
 let botaoDepositar = document.getElementById("botao-depositar");
-let iconeUsuario = document.getElementById("icon-usuario");
 
 //ABRE O MODAL DE LOGIN AO CLICAR NO BOTAO ENTRAR
 botaoEntrar.addEventListener("click", function (event) {
@@ -132,18 +131,6 @@ $(document).on("click", "#btn-voltar-modal-registro", function (event) {
   event.preventDefault();
   $("#etapa-registro-1").removeClass("hidden");
   $("#etapa-registro-2").addClass("hidden");
-});
-
-//ABRE A PAGINA DE PERFIL DO USUARIO AO CLICAR NO ICONE DO USUARIO
-iconeUsuario.addEventListener("click", function (event) {
-  event.preventDefault();
-
-
-  $(document).ready(function () {
-    $("#main").load("./app/pages/perfil/index.html", function () {
-      $("#main").addClass("hidden");
-    });
-  });
 });
 
 //VERIFICA SE O USUARIO ESTA LOGADO

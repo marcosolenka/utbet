@@ -11,7 +11,20 @@
       "_nome": "Marcos",
       "_sobrenome": "Macedo",
       "_dataNascimento": "1999-07-20T00:00:00.000Z",
-      "valorEmConta": 80
+      "valorEmConta": 105
+    },
+    {
+      "id": "cce1",
+      "_email": "teste@teste.com",
+      "_senha": "teste1234",
+      "_pais": "Albânia",
+      "_moeda": "Albanian lek",
+      "_numero": "+55 (42) 9 9163-2093",
+      "_cpf": "099.999.992-22",
+      "_nome": "Marcos",
+      "_sobrenome": "Macedo",
+      "_dataNascimento": "1999-07-20T00:00:00.000Z",
+      "_valorEmConta": 30
     }
   ]
 }

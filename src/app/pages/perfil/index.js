@@ -1,5 +1,20 @@
 import { UsuarioService } from "../../services/usuario.service.js";
 
+let botaoVoltar = document.getElementById('voltar');
+let botaoSair = document.getElementById('sair');
+
+botaoVoltar.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    window.location.href = '/src/index.html';
+});
+
+botaoSair.addEventListener('click', (event) => {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = '/src/index.html';
+});
+
 consultaEmail();
 consultaPais();
 consultaMoeda();

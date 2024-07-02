@@ -49,6 +49,10 @@ export class User {
     this._dataNascimento = data;
   }
 
+  set valorEmConta(valor_p){
+    this._valorEmConta = valor_p;
+  }
+
   get email(){
     return this._email;
   }
