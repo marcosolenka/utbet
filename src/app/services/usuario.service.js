@@ -250,5 +250,42 @@ export class UsuarioService {
         }
     } 
 
+    async depositar(valor, email) {
+        try {
+            // Busca os usuários da API
+            const response = await fetch('http://localhost:3000/users');
+            if (!response.ok) {
+                throw new Error('Erro ao buscar os dados da API');
+            }
+            const usuarios = await response.json();
+    
+            const usuarioEncontrado = usuarios.find(usuario => usuario._email === email);
+
+            if (usuarioEncontrado) {
+                usuarioEncontrado.valorEmConta = parseFloat(usuarioEncontrado.valorEmConta) + parseFloat(valor);
+                const atualizaSaldo = await fetch(`http://localhost:3000/users/${usuarioEncontrado.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(usuarioEncontrado),
+                });
+    
+                if (!atualizaSaldo.ok) {
+                    throw new Error('Erro ao atualizar os dados do usuário');
+                }
+                return true;
+            } else {
+                return false;
+            }
+    
+        } catch (error) {
+            console.error('Erro ao depositar:', error);
+            return false;
+        }
+    }
+    
+    
+
 }
 
